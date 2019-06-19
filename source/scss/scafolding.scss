@@ -1,0 +1,55 @@
+@include font-face("Scriptina", normal, 400);
+@include font-face("Alegreya", normal, 400, 700);
+@include font-face("PlayfairDisplay", normal, 700);
+@include font-face("ProximaNova", normal, 400);
+@include font-face("TimesNewRomanPSMT", normal, 400);
+
+$main-color: #56534c;
+$accent-color: #ffffff;
+$third-color: #a47d5e;
+
+body {
+    font-family: "Alegreya", serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 24px;
+    color: $main-color;
+
+    background-color: lightgrey;
+
+    > svg {
+        display: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+
+    box-shadow: 0px 0px 70px -29px rgba(0,0,0,1);
+}
+
+.wrapper {
+    @include wrapper();
+
+    @media screen and (max-width: 540px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media screen and (max-width: 460px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/*.debug {
+    @include debug(rgba(0, 0, 0, .5), #000);
+    z-index: 999;
+}*/

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+
+    <include src="build/img/sprite.svg"></include>
+
+    <div class="debug">
+        <div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="main-header">
+            <div class="main-header__wrapper">
+
+                <button class="main-header__show-menu"></button>
+                <a class="logo">Gustoso</a>
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="" class="main-navigation__link">Welcome</a></li>
+                        <li><a href="" class="main-navigation__link">Menu</a></li>
+                        <li><a href="" class="main-navigation__link">Reservations</a></li>
+                        <li><a href="" class="main-navigation__link">News</a></li>
+                        <li><a href="" class="main-navigation__link">Contact</a></li>
+                    </ul>
+                </nav>
+                <ul class="social">
+                    <li><a href="#" class="social__link">
+                        <svg width="16" height="13">
+                            <use xlink:href="#icon-twitter"></use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" class="social__link">
+                        <svg width="16" height="13">
+                            <use xlink:href="#icon-facebook"></use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" class="social__link">
+                        <svg width="16" height="13">
+                            <use xlink:href="#icon-instagram"></use>
+                        </svg>
+                    </a></li>
+                </ul>
+
+            </div>
+        </header>
+
+        <section class="first-screen">
+            <h1 class="first-screen__title">Pastry with love</h1>
+            <p class="first-screen__text">We’re bringing you fresh ingredients every day in ways you can’t resist.</p>
+            <a class="first-screen__link" href="">Our menu</a>
+        </section>
+
+        <section class="about">
+            <div class="wrapper">
+                <div class="about__inner">
+
+                    <div class="about__description">
+                        <h2 class="title about__title">Art of cakes</h2>
+                        <h3 class="subtitle about__subtitle">we create delicious memories</h3>
+                        <p class="about__text">Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+                            Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus
+                            eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.</p>
+                        <div class="portrait">
+                            <span class="portrait__position">Chef Cook</span>
+                            <div class="portrait__inner">
+                                <span class="portrait__name">Benito</span>
+                                <picture>
+                                    <source srcset="img/chef.webp 1x, img/chef@2x.webp 2x" type="image/webp">
+                                    <img class="portrait__image" src="img/chef.jpg" srcset="img/chef@2x.jpg 2x" alt="Ингредиенты и блюда">
+                                </picture>
+                                <span class="portrait__name">Gaspare</span>
+                            </div>
+                            <bloquote class="portrait__cite">Unique creations for unique <br> occasions.</bloquote>
+                        </div>
+                    </div>
+
+                    <div class="about__images">
+                        <div class="about__images-wrapper">
+                            <picture>
+                                <source srcset="img/dishes.webp 1x, img/dishes@2x.webp 2x" type="image/webp">
+                                <img src="img/dishes.png" srcset="img/dishes@2x.png 2x" alt="Ингредиенты и блюда">
+                            </picture>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="favourite">
+            <div class="wrapper">
+                <div class="favourite__inner">
+                    <div class="favourite__content">
+
+                        <div class="favourite__image-wrapper">
+                            <picture>
+                                <source srcset="img/pancake.webp 1x, img/pancake@2x.webp 2x" type="image/webp">
+                                <img class="favourite__image" src="img/pancake.jpg" srcset="img/pancake@2x.jpg"
+                                     alt="Панкейк">
+                            </picture>
+                            <div class="favourite__stars">
+                                <svg width="20" height="20">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="#icon-star-full"></use>
+                                </svg>
+                                <svg width="20" height="20">
+                                    <use xlink:href="#icon-star-empty"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="favourite__main">
+                            <button class="favourite__split"></button>
+                            <h2 class="title favourite__title">Tasty pancakes</h2>
+                            <h3 class="subtitle favourite__subtitle">season favourite</h3>
+                            <p class="favourite__text">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
+                                libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
+
+                            <div class="slider">
+                                <button class="slider__button slider__button_prev">
+                                    <svg width="33" height="33">
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="slider__images">
+                                    <img src="img/slide-1.jpg" alt="Первое блюдо">
+                                    <img src="img/slide-2.jpg" alt="Второе блюдо">
+                                    <img src="img/slide-3.jpg" alt="Третье блюдо">
+                                </div>
+                                <button class="slider__button slider__button_next">
+                                    <svg width="33" height="33">
+                                        <use xlink:href="#icon-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+
+                        </div>
+                        <div class="favourite__time">
+                            <h3 class="favourite__ready">ready in</h3>
+                            <span class="favourite__count-minutes">40</span>
+                            <span class="favourite__minutes">mins</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

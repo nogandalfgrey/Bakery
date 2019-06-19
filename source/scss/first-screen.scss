@@ -1,0 +1,101 @@
+.first-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 900px;
+    margin-top: -70px;
+    padding: 0 60px;
+    border-bottom: 10px solid $accent-color;
+
+    color: $accent-color;
+    background-color: #5e554c;
+    background-image: url("../img/bg-first.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    @media screen and (min-device-pixel-ratio: 2) {
+        background-image: url("../img/bg-first@2x.jpg");
+    }
+
+    &__title {
+        position: relative;
+
+        margin-bottom: 115px;
+
+        font-family: "PlayfairDisplay", sans-serif;
+        font-size: 92px;
+        line-height: 1;
+        letter-spacing: 6.9px;
+        font-weight: bold;
+        text-align: center;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            width: 190px;
+            height: 12px;
+
+            background-image: url(../img/dashed-line.svg);
+        }
+
+        @media screen and (max-width: 980px) {
+            font-size: 70px;
+        }
+
+        @media screen and (max-width: 530px) {
+            font-size: 50px;
+        }
+    }
+
+    &__text {
+        max-width: 600px;
+        margin-bottom: 60px;
+
+        font-family: "ProximaNova", sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 1.5;
+        letter-spacing: 2.4px;
+        text-align: center;
+
+        @media screen and (max-width: 980px) {
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 530px) {
+            font-size: 14px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 50px;
+        margin: 0 auto;
+
+        background-color: rgba(86, 83, 76, .5);
+
+        font-family: "Alegreya", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 4.2px;
+        color: $accent-color;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 980px) {
+        min-height: 800px;
+    }
+
+    @media screen and (max-width: 530px) {
+        min-height: 700px;
+    }
+}
