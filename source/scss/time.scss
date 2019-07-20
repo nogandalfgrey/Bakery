@@ -1,0 +1,89 @@
+.time {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+
+    background-color: $accent-color;
+    background-image: url(../img/field.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    box-shadow: 0px 25px 70px 0px rgba(105, 80, 58, .45);
+    box-sizing: border-box;
+
+    @media screen and (max-width: 720px) {
+        width: auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    @media screen and (max-width: 460px) {
+        padding: 10px;
+    }
+    
+    &_transparent {
+        background-color: rgba(255, 255, 255, .8);
+        background-image: none;
+
+        .time__count-minutes {
+            font-size: 60px;
+            color: $main-color;
+        }
+    }
+
+    &__ready {
+        margin: 0;
+
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1.67;
+        letter-spacing: 1.8px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $third-color;
+
+        @media screen and (max-width: 720px) {
+            font-size: 12px;
+        }
+    }
+
+    &__count-minutes {
+        font-size: 92px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: 9.2px;
+        text-align: center;
+        color: #dfc691;
+
+        @media screen and (max-width: 720px) {
+            font-size: 60px;
+        }
+
+        @media screen and (max-width: 460px) {
+            font-size: 48px;
+        }
+    }
+
+    &__minutes {
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 1.67;
+        letter-spacing: 1.8px;
+        text-align: center;
+        color: #979285;
+
+        @media screen and (max-width: 720px) {
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 460px) {
+            font-size: 10px;
+        }
+    }
+}
+

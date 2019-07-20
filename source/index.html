@@ -161,13 +161,11 @@
                                     </svg>
                                 </button>
                             </div>
-
-
                         </div>
-                        <div class="favourite__time">
-                            <h3 class="favourite__ready">ready in</h3>
-                            <span class="favourite__count-minutes">40</span>
-                            <span class="favourite__minutes">mins</span>
+                        <div class="time favourite__time">
+                            <h3 class="time__ready">ready in</h3>
+                            <span class="time__count-minutes">40</span>
+                            <span class="time__minutes">mins</span>
                         </div>
 
                     </div>
@@ -228,29 +226,85 @@
                 <div class='sandwich__inner'>
                     <ul class='ingredients-list'>
                         <li class='ingredients-item'>
-                            <img src='' alt='' class='ingredients-item__image'>
+                            <div class='ingredients-item__outer-image'>
+                                <picture>
+                                    <source srcset='img/item-1.webp 1x, img/item-1@2x.webp 2x' type='image/webp'>
+                                    <img src='img/item-1.jpg' srcset='img/item-1@2x.jpg' alt='Первый интредиент'
+                                         class='ingredients-item__image'>
+                                </picture>
+                            </div>
                             <h3 class='ingredients-item__name'>Class aptent</h3>
                             <p class='ingredients-item__info'>Quot alienum persecuti ut eam, nam ad atqui primis nusquam.</p>
                         </li>
                         <li class='ingredients-item'>
-                            <img src='' alt='' class='ingredients-item__image'>
-                            <h3 class='ingredients-item__name'></h3>
-                            <p class='ingredients-item__info'></p>
+                            <div class='ingredients-item__outer-image'>
+                                <picture>
+                                    <source srcset='img/item-2.webp 1x, img/item-2@2x.webp 2x' type='image/webp'>
+                                    <img src='img/item-2.jpg' srcset='img/item-2@2x.jpg' alt='Второй интредиент'
+                                         class='ingredients-item__image'>
+                                </picture>
+                            </div>
+                            <h3 class='ingredients-item__name'>Nulla eget</h3>
+                            <p class='ingredients-item__info'>Nullam dictum felis eu pede mollis pretium Integer tincidunt.</p>
                         </li>
                         <li class='ingredients-item'>
-                            <img src='' alt='' class='ingredients-item__image'>
-                            <h3 class='ingredients-item__name'></h3>
-                            <p class='ingredients-item__info'></p>
+                            <div class='ingredients-item__outer-image'>
+                                <picture>
+                                    <source srcset='img/item-3.webp 1x, img/item-3@2x.webp 2x' type='image/webp'>
+                                    <img src='img/item-3.jpg' srcset='img/item-3@2x.jpg' alt='Третий интредиент'
+                                         class='ingredients-item__image'>
+                                </picture>
+                            </div>
+                            <h3 class='ingredients-item__name'>Sed nibh purus</h3>
+                            <p class='ingredients-item__info'>Aenean eleifend tellus leo ligula, porttitor eu, consequat vitae.</p>
                         </li>
                     </ul>
-                    <div class='sand2ich__image'><img src='' alt=''>
-                        <div class='sandwich__time'></div>
-                        <a href='' class='sandwich__recipe'></a>
+                    <div class='recipe'>
+                        <picture>
+                            <source srcset="img/sandwich.webp 1x, img/sandwich@2x.webp 2x" type="image/webp">
+                            <img class="recipe__photo" src="img/sandwich.jpg" srcset="img/sandwich@2x.jpg"
+                                 alt="Sandwich">
+                        </picture>
+                        <div class='time-outer'>
+                            <div class="time time_transparent recipe__time">
+                                <h3 class="time__ready">Prep</h3>
+                                <span class="time__count-minutes">15</span>
+                                <span class="time__minutes">mins</span>
+                            </div>
+                            <div class="time time_transparent recipe__time">
+                                <h3 class="time__ready">cook</h3>
+                                <span class="time__count-minutes">35</span>
+                                <span class="time__minutes">mins</span>
+                            </div>
+                            <div class="time recipe__time">
+                                <h3 class="time__ready">ready in</h3>
+                                <span class="time__count-minutes">50</span>
+                                <span class="time__minutes">mins</span>
+                            </div>
+                        </div>
+                        <a href='' class='recipe__link'>FULL RECIPE</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <footer class='main-footer'>
+            <div class='wrapper'>
+                <nav class='footer-navigation'>
+                    <ul class='footer-navigation__list'>
+                        <li><a class='footer-navigation__item' href='#'>our menu</a></li>
+                        <li><a class='footer-navigation__item' href='#'>gallery</a></li>
+                        <li><a class='footer-navigation__item' href='#'>culture</a></li>
+                    </ul>
+                    <a class="logo">Gustoso</a>
+                    <ul class='footer-navigation__list'>
+                        <li><a class='footer-navigation__item' href='#'>events</a></li>
+                        <li><a class='footer-navigation__item' href='#'>catering</a></li>
+                        <li><a class='footer-navigation__item' href='#'>visit us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
     </div>
 
     <script type="text/javascript" src="js/script.js"></script>
