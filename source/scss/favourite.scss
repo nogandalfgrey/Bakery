@@ -264,6 +264,7 @@
 
     img {
         display: block;
+        flex-shrink: 0;
         width: 90px;
         height: 90px;
         margin: 0 15px;
