@@ -14,13 +14,11 @@ $(function () {
     const $wrapper = $(slider.wrapper);
     this.$prev = $(slider.btnPrev);
     this.$next = $(slider.btnNext);
+
     // ширина одной картинки
     let width = $images.eq(0).outerWidth(true);
-
     // номер текущей картинки
     let imageNumber = 0;
-    // текущее смещение блока с картинками
-    let cur = 0;
     // количество изображений, видимых в слайдере
     let imagesInOneScreen = $wrapper.width() / width;
     // завршена ли анимация
@@ -35,10 +33,11 @@ $(function () {
       if (isAnimationComplete) move(1);
     });
 
-    window.onresize = function () {
+    window.addEventListener('resize', function () {
       width = $images.eq(0).outerWidth(true);
       imagesInOneScreen = $wrapper.width() / width;
-    };
+      shift(imageNumber);
+    });
 
     if (slider.auto) {
       setInterval(function () {
@@ -54,50 +53,44 @@ $(function () {
 
       imageNumber += direction;
 
-      if(direction === 1) {
-        if(imageNumber > $images.length - imagesInOneScreen) {
-          imageNumber = 0;
-          shift(0);
-        }
-        else {
-          shift(cur - width);
-        }
+      if(imageNumber > $images.length - imagesInOneScreen) {
+        imageNumber = 0;
       }
-      else {
-        if(imageNumber < 0) {
-          imageNumber = $images.length - imagesInOneScreen;
-          shift(-(($images.length - imagesInOneScreen) * width));
-        }
-        else {
-          shift(cur + width);
-        }
+      else if(imageNumber < 0) {
+        imageNumber = $images.length - imagesInOneScreen;
       }
 
+      shift(imageNumber);
     }
 
-    function shift(left) {
+    function shift(number) {
+      // текущее смещение блока с картинками
+      let cur = width * number;
+
       $wrapper.animate({
-        left: left
+        left: -cur
       }, 300, function () {
         isAnimationComplete = true;
       });
-      cur = left;
     }
   }
 
   const $navigation = $('.main-header nav');
   const $showMenu = $('.main-header__show-menu');
   const $closeMenu = $('.main-navigation__close-menu');
+
   $showMenu.on('click', function () {
     $navigation.removeClass('main-navigation').addClass('main-navigation_mobile');
   });
+
   $closeMenu.on('click', function () {
     $navigation.removeClass('main-navigation_mobile').addClass('main-navigation');
   });
-  window.onresize = function (e) {
+
+  window.addEventListener('resize', function (e) {
     if (window.innerWidth > 980) {
       $navigation.removeClass('main-navigation_mobile').addClass('main-navigation');
     }
-  };
+  });
 
 });
