@@ -13,6 +13,8 @@
     box-shadow: 0px 25px 70px 0px rgba(105, 80, 58, .45);
     box-sizing: border-box;
 
+    user-select: none;
+
     @media screen and (max-width: 720px) {
         width: auto;
         height: auto;

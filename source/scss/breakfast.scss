@@ -211,8 +211,10 @@
 
         &__button {
             display: block;
-            padding: 19px 70px;
+            width: 200px;
+            height: 60px;
             margin: 50px auto;
+            padding: 0;
 
             font-family: 'Alegreya', sans-serif;
             font-size: 18px;
@@ -223,6 +225,23 @@
             color: $third-color;
 
             border: solid 1px #9e9c93;
+
+            cursor: pointer;
+
+            transition: letter-spacing 500ms ease-in-out, border-radius 200ms ease-in-out;
+
+            &:hover {
+                letter-spacing: 6px;
+            }
+
+            &:active {
+                border-radius: 10px;
+            }
+
+            &:focus {
+                outline: none;
+                letter-spacing: 6px;
+            }
 
             @media (max-width: 570px) {
                 margin-top: 20px;

@@ -212,19 +212,41 @@
 
         background-color: transparent;
 
+        cursor: pointer;
+
+        &:hover svg path {
+            fill: lighten(#56534c, 10%);
+        }
+
+        &:active svg path {
+            fill: lighten(#56534c, 20%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus svg path {
+            fill: lighten(#56534c, 10%);
+        }
+
         &_prev {
             transform: rotate(180deg);
         }
+    }
 
-        svg {
-            display: block;
-        }
+    &__wrapper {
+        display: flex;
+        flex-shrink: 0;
+
+        position: relative;
     }
 
     &__images {
-        display: flex;
+        width: 360px;
 
-        flex-shrink: 0;
+        position: relative;
+
         overflow: hidden;
 
         @media screen and (max-width: 1366px) {
@@ -232,7 +254,7 @@
         }
 
         @media screen and (max-width: 1120px) {
-            width: auto;
+            width: 360px;
         }
 
         @media screen and (max-width: 720px) {

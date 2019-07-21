@@ -89,6 +89,14 @@
         color: $accent-color;
         text-decoration: none;
         text-transform: uppercase;
+
+        &:hover {
+            background-color: lighten(rgba(86, 83, 76, .5), 20%);
+        }
+
+        &:active {
+            background-color: lighten(rgba(86, 83, 76, .5), 10%);
+        }
     }
 
     @media screen and (max-width: 980px) {

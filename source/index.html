@@ -10,32 +10,13 @@
 
     <include src="build/img/sprite.svg"></include>
 
-    <div class="debug">
-        <div>
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <header class="main-header">
             <div class="main-header__wrapper">
 
                 <button class="main-header__show-menu"></button>
                 <a class="logo">Gustoso</a>
-                <nav class="main-navigation">
+                <nav class="main-navigation_mobile">
                     <ul>
                         <li><a href="" class="main-navigation__link">Welcome</a></li>
                         <li><a href="" class="main-navigation__link">Menu</a></li>
@@ -43,6 +24,7 @@
                         <li><a href="" class="main-navigation__link">News</a></li>
                         <li><a href="" class="main-navigation__link">Contact</a></li>
                     </ul>
+                    <button class='main-navigation__close-menu'>Close</button>
                 </nav>
                 <ul class="social">
                     <li><a href="#" class="social__link">
@@ -146,19 +128,20 @@
 
                             <div class="slider">
                                 <button class="slider__button slider__button_prev">
-                                    <svg width="33" height="33">
-                                        <use xlink:href="#icon-arrow"></use>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path data-name="interface - arrow right" d="M16 32A16 16 0 1 0 0 16a16 16 0 0 0 16 16zm0-2A14 14 0 1 0 2 16a14 14 0 0 0 14 14zm-2.8-8.19a.713.713 0 0 0 .98 0l5.62-5.35a.635.635 0 0 0 0-.93.713.713 0 0 0-.98 0l-5.62 5.34a.647.647 0 0 0 0 .94zm6.6-5.33a.713.713 0 0 1-.98 0l-5.62-5.35a.647.647 0 0 1 0-.94.713.713 0 0 1 .98 0l5.62 5.35a.647.647 0 0 1 0 .94z" fill="#56534c" fill-rule="evenodd"/></svg>
                                 </button>
                                 <div class="slider__images">
-                                    <img src="img/slide-1.jpg" alt="Первое блюдо">
-                                    <img src="img/slide-2.jpg" alt="Второе блюдо">
-                                    <img src="img/slide-3.jpg" alt="Третье блюдо">
+                                    <div class='slider__wrapper'>
+                                        <img src="img/slide-1.jpg" alt="Первое блюдо">
+                                        <img src="img/slide-2.jpg" alt="Второе блюдо">
+                                        <img src="img/slide-3.jpg" alt="Третье блюдо">
+                                        <img src="img/slide-1.jpg" alt="Первое блюдо">
+                                        <img src="img/slide-2.jpg" alt="Второе блюдо">
+                                        <img src="img/slide-3.jpg" alt="Третье блюдо">
+                                    </div>
                                 </div>
                                 <button class="slider__button slider__button_next">
-                                    <svg width="33" height="33">
-                                        <use xlink:href="#icon-arrow"></use>
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path data-name="interface - arrow right" d="M16 32A16 16 0 1 0 0 16a16 16 0 0 0 16 16zm0-2A14 14 0 1 0 2 16a14 14 0 0 0 14 14zm-2.8-8.19a.713.713 0 0 0 .98 0l5.62-5.35a.635.635 0 0 0 0-.93.713.713 0 0 0-.98 0l-5.62 5.34a.647.647 0 0 0 0 .94zm6.6-5.33a.713.713 0 0 1-.98 0l-5.62-5.35a.647.647 0 0 1 0-.94.713.713 0 0 1 .98 0l5.62 5.35a.647.647 0 0 1 0 .94z" fill="#56534c" fill-rule="evenodd"/></svg>
                                 </button>
                             </div>
                         </div>
@@ -307,6 +290,7 @@
         </footer>
     </div>
 
+    <script type='text/javascript' src='js/jquery-3.4.1.min.js'></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

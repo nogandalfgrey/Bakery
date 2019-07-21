@@ -95,9 +95,14 @@
 
         border: 2px dashed #dfc691;
 
-    }
+        &:hover, &:focus {
+            border-style: solid;
+        }
 
-    &__time {
+        &:active {
+            color: darken(#dfc691, 10%);
+            border-color: darken(#dfc691, 10%);
+        }
 
     }
 }

@@ -103,5 +103,13 @@
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 4.2px;
+
+        &:hover {
+            color: lighten($main-color, 20%);
+        }
+
+        &:active {
+            color: lighten($main-color, 30%);
+        }
     }
 }
